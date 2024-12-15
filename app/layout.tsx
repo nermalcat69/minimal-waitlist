@@ -14,10 +14,10 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Minimal Waitlist - Simple Waitlist for SaaS",
-  description: "A minimal, modern waitlist solution for SaaS products. Built with Next.js and Tailwind CSS, featuring Discord notifications and a clean user interface.",
+  description: "A minimal, modern waitlist solution for SaaS products. Built with Next.js and Tailwind CSS, featuring Discord webhooks and a clean user interface.",
   openGraph: {
     title: "Minimal Waitlist - Simple Waitlist for SaaS",
-    description: "A minimal, modern waitlist solution for SaaS products. Built with Next.js and Tailwind CSS, featuring Discord notifications and a clean user interface.",
+    description: "A minimal, modern waitlist solution for SaaS products. Built with Next.js and Tailwind CSS, featuring Discord webhooks and a clean user interface.",
     images: [{
       url: 'https://waitlist.zerops.xyz/og.webp',
       width: 1200,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Minimal Waitlist - Simple Waitlist for SaaS",
-    description: "A minimal, modern waitlist solution for SaaS products. Built with Next.js and Tailwind CSS, featuring Discord notifications and a clean user interface.",
+    description: "A minimal, modern waitlist solution for SaaS products. Built with Next.js and Tailwind CSS, featuring Discord webhooks and a clean user interface.",
     images: ['https://waitlist.zerops.xyz/og.webp'],
   },
   keywords: [
