@@ -39,7 +39,7 @@ export default function Home() {
         </div>
         <div className="pt-10">
           <p>
-            Follow me at <a href="https://x.com/nermalcat69" target="_blank" className="text-primary underline">@nermalcat69</a>
+            Follow me at <a href="https://x.com/arjvnz" target="_blank" className="text-primary underline">@arjvnz</a>
           </p>
         </div>
       </div>
