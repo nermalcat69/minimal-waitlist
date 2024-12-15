@@ -1,7 +1,21 @@
-# minimal-waitlist
+# Minimal Waitlist
 Minimal Waitlist Page with Discord Webhooks
 
 
+### How to import to zerops
+Go to zerops dashboard and import this project:
+
+```yml
+project:
+  name: Minimal Waitlist
+services:
+  - hostname: app
+    type: nodejs@20
+    buildFromGit: https://github.com/nermalcat69/minimal-waitlist
+    enableSubdomainAccess: true
+```
+
+You can assign the "DISCORD_WEBHOOK_URL" environment variable in the service dashboard.
 
 ### How to export emails to json in discord channel
 
