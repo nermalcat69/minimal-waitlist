@@ -53,7 +53,7 @@ const features = [
     description: 'Sends a webhook to your discord channel when someone joins the waitlist.',
   },
   {
-    title: 'Rate Limited for IPs',
+    title: 'Rate Limit',
     description: 'Rate limits the requests for each IP address for 1 hour.',
   },
   {

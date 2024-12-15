@@ -5,3 +5,8 @@ services:
     type: nodejs@20
     buildFromGit: https://github.com/nermalcat69/minimal-waitlist
     enableSubdomainAccess: true
+
+  - hostname: redis
+    type: valkey@7.2
+    mode: NON_HA
+    priority: 2

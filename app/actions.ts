@@ -1,7 +1,12 @@
 'use server'
 
+import { headers } from 'next/headers'
+import { checkRateLimit } from '../lib/rate-limit'
+
 export async function joinWaitlist(formData: FormData) {
     const email = formData.get('email')
+    const headersList = headers()
+    const ip = (await headersList).get('x-forwarded-for') || 'anonymous'
 
     if (!email || typeof email !== 'string') {
         return {
@@ -11,7 +16,15 @@ export async function joinWaitlist(formData: FormData) {
     }
 
     try {
-        // Replace this with your Discord webhook URL
+        const { success, reset } = await checkRateLimit(ip)
+        
+        if (!success) {
+            return {
+                success: false,
+                message: `Rate limit exceeded. Please try again in ${Math.ceil((reset.getTime() - Date.now()) / 1000 / 60)} minutes.`
+            }
+        }
+
         const webhookUrl = process.env.DISCORD_WEBHOOK_URL
 
         if (!webhookUrl) {
@@ -48,10 +61,10 @@ export async function joinWaitlist(formData: FormData) {
 
         return {
             success: true,
-            message: 'Thanks for joining the waitlist! We\'ll be in touch soon. For now join our Discord for updates 😉'
+            message: "Thanks for joining the waitlist! We'll be in touch soon. For now join our Discord for updates 😉"
         }
     } catch (error) {
-        console.error('Webhook error:', error)
+        console.error('Error:', error)
         return {
             success: false,
             message: 'Something went wrong. Please try again later.'
