@@ -15,7 +15,14 @@ services:
     enableSubdomainAccess: true
 ```
 
-You can assign the "DISCORD_WEBHOOK_URL" environment variable in the service dashboard.
+You can assign the `DISCORD_WEBHOOK_URL`environment variable in the service dashboard.
+
+Make sure to create and copy your webhook URL from your Discord server:
+
+Go to your server settings.
+Navigate to the desired text channel.
+Open 'Integrations' > 'Webhooks'.
+Create a new webhook and copy the webhook URL.
 
 ### How to export emails to json in discord channel
 
