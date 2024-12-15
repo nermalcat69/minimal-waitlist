@@ -1,0 +1,7 @@
+project:
+  name: Minimal Waitlist
+services:
+  - hostname: app
+    type: nodejs@20
+    buildFromGit: https://github.com/nermalcat69/minimal-waitlist
+    enableSubdomainAccess: true

@@ -1,0 +1,14 @@
+zerops:
+  - setup: waitlist
+    build:
+      base: nodejs@20
+      buildCommands:
+        - pnpm i
+        - pnpm run build
+      deployFiles: ./
+    run:
+      base: nodejs@20
+      ports:
+        - port: 3000
+          httpSupport: true
+      start: pnpm run start
