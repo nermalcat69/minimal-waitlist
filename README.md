@@ -1,4 +1,6 @@
 # Minimal Waitlist
+![Frame 302](https://github.com/user-attachments/assets/647a0084-362c-4e55-a677-f78d5722eab5)
+
 Minimal Waitlist Page with Discord Webhooks
 
 
